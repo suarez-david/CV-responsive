@@ -117,11 +117,11 @@ font-size: medium;
     color: var(--secondary);
 }
 .left_items ul li .text {
-    font-weight: 300;
+    font-weight: 200;
 }
 .left_items ul li .dates {
     color: var(--secondary);
-    font-weight: 400;
+    font-weight: 300;
 }
 .phone a{
     color: #f8f9fa;
