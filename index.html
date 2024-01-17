@@ -279,8 +279,8 @@
             const e = document.querySelector(".container");
 
             // RESIZE
-            e.style.maxWidth = "716px";
-            
+            e.style.maxWidth = "1500px";
+
             // OPTIONS
             const opt = {
                 filename: 'Suarez David CV.pdf',
@@ -291,7 +291,7 @@
                 margin: 0,
                 jsPDF: {
                     unit: "pt",
-                    format: "Legal",
+                    format: "A2",
                     orientation: "portrait"
                 },
                 pagebreak: {
@@ -299,7 +299,8 @@
                 }
             };
             html2pdf().set(opt).from(e).save();
-
+            pdf.internal.pageSize.width = e.offsetWidth;    
+            
             // RESIZE
             setTimeout(() => {e.style.maxWidth = "1432px";}, 2000);
         }
