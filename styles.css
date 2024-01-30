@@ -309,3 +309,43 @@ font-size: medium;
         margin-bottom: 1rem;
     }
 }
+/* Estilos para el contenedor de las banderas y el interruptor de idioma */
+#language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    z-index: 1000; /* Ajusta el z-index según sea necesario */
+}
+
+/* Estilos para los enlaces de cambio de idioma */
+#language-switcher a {
+    margin-right: 10px;
+}
+
+/* Ajusta los estilos de las banderas según sea necesario */
+#language-switcher img {
+    width: 30px; /* Ajusta el tamaño de las banderas según tus necesidades */
+    height: auto;
+    border-radius: 50%; /* Bordes redondeados para las banderas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre las banderas */
+}
+
+/* Ajusta el tamaño y posición del interruptor de idioma */
+#language-switcher a {
+    width: 30px; /* Ajusta el ancho del enlace según tus necesidades */
+    height: 30px; /* Ajusta la altura del enlace según tus necesidades */
+}
+
+/* GENERAL SETTINGS */
+body {
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+/* Puedes agregar estilos adicionales según tus preferencias */

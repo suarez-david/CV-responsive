@@ -8,12 +8,49 @@
 
     <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
+    
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="styles.css">
 
+    <script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+
+    // Asocia las banderas con el cambio de idioma
+    document.getElementById('language-switcher').addEventListener('click', function(event) {
+        if (event.target.tagName === 'IMG') {
+            const languageCode = (event.target.alt === 'Español') ? 'es' : 'en';
+            changeLanguage(languageCode);
+        }
+    });
+}
+
+function changeLanguage(languageCode) {
+    if (typeof google !== 'undefined' && google.translate) {
+        // Traduce la página al nuevo idioma
+        google.translate.translatePage(languageCode);
+
+        // También puedes intentar forzar un evento 'languageChanged'
+        var event = document.createEvent('Event');
+        event.initEvent('languageChanged', true, false);
+        document.dispatchEvent(event);
+    } else {
+        console.error("Google Translate no está disponible.");
+    }
+}
+
+    </script>
+    
 </head>
 <body>
+    <div id="language-switcher">
+        <a href="#" onclick="changeLanguage('es')"><img src="bandera_espana.png" alt="Español"></a>
+        <a href="#" onclick="changeLanguage('en')"><img src="bandera_reino_unido.png" alt="English"></a>
+      </div>
     <div class="container">
 
         <div class="left_side">
@@ -306,6 +343,6 @@
         }
 
     </script>
-    
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
 </body>
 </html>
