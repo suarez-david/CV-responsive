@@ -308,6 +308,22 @@ font-size: medium;
     .hobby li {
         margin-bottom: 1rem;
     }
+    .img_setting img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Estilo predeterminado para los iconos en línea */
+.hobby {
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+/* Media query para ajustar el diseño cuando la pantalla es más estrecha */
+@media (max-width: 600px) {
+    .hobby {
+        flex-direction: column; /* Apila los iconos verticalmente en pantallas estrechas */
+    }
 }
 /* Estilos para el contenedor de las banderas y el interruptor de idioma */
 #language-switcher {
